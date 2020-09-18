@@ -1,0 +1,19 @@
+<?php
+// +----------------------------------------------------------------------
+// | 会话设置
+// +----------------------------------------------------------------------
+//E:\App\tp6\app\api\config\session.php
+return [
+    // session name
+  'name' => 'PHPSESSID',
+    // SESSION_ID的提交变量,解决flash上传跨域
+    // 驱动方式 支持file cache
+    //'type'           => 'file',
+  'type' => 'cache',
+    // 存储连接标识 当type使用cache的时候有效
+  'store' => 'redis',
+    // 过期时间
+  'expire' => 1440,
+    // 前缀
+  'prefix' => 'api_',
+];

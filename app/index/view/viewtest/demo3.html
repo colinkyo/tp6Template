@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--1:循环控制-->
+<?php foreach($users as $key => $user): ?>
+<p>
+    <?php echo $key; ?>:
+    <?php echo $user['name']; ?>:
+    <?php echo $user['age']; ?>:
+    <?php echo $user['psw']; ?>:
+</p>
+<?php endforeach; ?>
+<hr />
+<?php foreach($users as $key => $user): ?>
+<p><?=$key?>:<?=$user['name']?>:<?=$user['age']?>:<?=$user['psw']?>:</p>
+<?php endforeach; ?>
+
+<hr />
+{foreach $users as $key=>$user}
+<p>{$key}:{$user['name']}:{$user['age']}:{$user['psw']}:</p>
+{/foreach}
+
+<hr />
+{volist name = "users" id = "user"}
+<p>{$key}:{$user['name']}:{$user['age']}:{$user['psw']}:</p>
+{/volist}
+
+<hr />
+{//条件判断}
+{foreach $users as $key=>$user}
+{if($user.age <35)}
+<p>{$key}:{$user['name']}:{$user['age']}:{$user['psw']}:</p>
+{/if}
+{/foreach}
+</body>
+</html>
