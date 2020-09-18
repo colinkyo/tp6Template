@@ -3,3 +3,6 @@
 /vendor
 *.log
 .env
+
+app/index/common/WxpayAPI/WxPay.Config.Interface.php
+app/index/common/WxpayAPI/WxPay.Config.php
